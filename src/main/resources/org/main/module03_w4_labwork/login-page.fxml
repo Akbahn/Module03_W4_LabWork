@@ -12,8 +12,8 @@
          <image>
             <Image url="@Images/3d-render-gift-box-with-ribbon-present-package.jpg" />
          </image></ImageView>
-      <TextField fx:id="userName" layoutX="57.0" layoutY="137.0" promptText="Username" />
-      <TextField fx:id="password" layoutX="57.0" layoutY="188.0" promptText="Password" />
+      <TextField fx:id="userNameTxt" layoutX="57.0" layoutY="137.0" promptText="Username" />
+      <TextField fx:id="passwordTxt" layoutX="57.0" layoutY="188.0" promptText="Password" />
       <Button fx:id="loginBtn" layoutX="57.0" layoutY="242.0" mnemonicParsing="false" onAction="#validateCred" text="Login" />
       <Button fx:id="createBtn" layoutX="145.0" layoutY="242.0" mnemonicParsing="false" onAction="#createAccount" text="Register" />
    </children>

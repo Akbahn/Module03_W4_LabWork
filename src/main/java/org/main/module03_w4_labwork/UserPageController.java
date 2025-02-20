@@ -20,7 +20,6 @@ public class UserPageController {
     void moveToLoginPage(ActionEvent event) throws IOException {
         Scene scene = (logoutBtn.getScene());
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("login-page.fxml"));
-        //scene.getStylesheets().add(MainApplication.class.getResource("splashscreen.css").toExternalForm());
         scene.setRoot(fxmlLoader.load());
 
     }

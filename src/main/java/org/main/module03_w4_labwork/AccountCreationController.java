@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
@@ -38,9 +39,24 @@ public class AccountCreationController {
 
     @FXML
     void moveToUserPage(ActionEvent event) throws IOException {
-        Scene scene = (createBtn.getScene());
-        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("user-page.fxml"));
-        scene.setRoot(fxmlLoader.load());
+        String firstName = firstNameTxt.getText();
+        String lastName = lastNameTxt.getText();
+        String username = usernameTxt.getText();
+        String password = passwordTxt.getText();
+
+        if(firstName.isEmpty() || lastName.isEmpty() || username.isEmpty() || password.isEmpty()){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Empty Fields");
+            alert.setHeaderText(null);
+            alert.setContentText("Fields cannot be empty!");
+            alert.showAndWait();
+        }
+        else{
+            Scene scene = (createBtn.getScene());
+            FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("user-page.fxml"));
+            scene.setRoot(fxmlLoader.load());
+        }
+
 
     }
 
